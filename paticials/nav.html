@@ -1,0 +1,33 @@
+<!--Logo có kèm Event Click and Navigationbar all pages-->
+<!--Navigation Bar-->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!--Logo and Event Click-->
+        <div class="navbar-header">
+            
+            <a class="navbar-brand" href="/" ng-click="FuncHome()">
+                <img align="middle" class="navbar-logo" src="img/logovip.png" alt="Rada - Dịch vụ quanh ta" />
+                <span>Demo</span>
+
+            </a>
+        </div>
+        <!--Đăng nhập-->
+        <div class="collapse navbar-collapse" id="account">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/login" ng-click="myFunc()">
+                        <img align="middle" src="img/icon/user-login.png" alt="Tài khoản" style="float:none; height:28px; width:28px" />
+                        &nbsp; <strong>Đăng nhập</strong></a></li>
+            </ul>
+        </div>
+        <!--Search-->
+        <div class="collapse navbar-collapse" id="searchbar">
+            <form class="navbar-form" method="get" action="#">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" placeholder="Nhập dịch vụ bạn cần tìm?" />
+                    <span class="input-group-btn"><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>

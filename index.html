@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp" ng-controller="myCtrl">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo Template</title>
+     <!--Import Lib-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/demo.min.css" rel="stylesheet">
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <style>
+        .form-control.md {
+            min-width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div ng-include="'paticials/nav.html'"></div>
+    
+    <!--Content Index-->
+    <div class="wrap" ></div>
+    <!--Panel Left-->
+    <div ng-include="'pages/login.html'" ng-show="loginside"></div>
+     <!--MenuLeft Muốn thêm gì cứ add vô-->
+    <div class="container" ng-show="menuleft">
+            <div class="row">
+                <div class="col-sm-3 hidden-xs">
+                    <div class="panel panel-rada">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <span><img align="left" src="img/icon/menu-icon.png" alt="Demo - Dịch vụ quanh ta" style="float:none; height:32px; width:32px" /></span>
+                                &nbsp;<strong>DANH MỤC DỊCH VỤ</strong>
+                        </div>
+                        </h4>
+                        <!--All Item here-->
+                        <div class="list-group">
+                            <!--Item 1-->
+                            <a class="list-group-item list-group-item-action" href="/homerepair">&nbsp; <img alt="Sửa thiết bị gia đình" src="img/icon/home-repair-icon.png" style="float:none; height:25px; width:25px" /></span> &nbsp; Sửa thiết bị gia đình
+                            </a>
+                        <!--Item 2-->
+                            <a class="list-group-item list-group-item-action" href="/electricandwater">&nbsp; <img alt="Xây dựng, điện nước" src="img/icon/electric-water-repair.png" style="float:none; height:25px; width:25px" /></span> &nbsp; Xây dựng, điện nước
+                            </a>
+                        <!--Maybe add more Item like Item 1-->
+                        </div>
+                    </div>
+                </div>
+    <!--Carousel change here-->
+    <!--MAIN ROUTE CONTENT-->
+    <div ng-view></div>
+    <!--Footer-->
+
+    <div ng-include="'paticials/footer.html'"></div>
+
+    
+    
+    
+    
+<!--    <script src="js/moment.min.js"></script>-->
+    
+     <!--Import Lib-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+
+</html>
